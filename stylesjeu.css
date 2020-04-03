@@ -1,0 +1,56 @@
+/* GENERAL */
+body{
+    margin: 0;
+    font-family: arial, sans-serif;
+}
+
+h1{
+    margin: 0;
+    text-align: center;
+    color: #737170;
+    font-family: arial;
+}
+
+.container{
+    max-width: 1150px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* HEADER */
+
+.logo{
+    margin-left: 10%;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: rgba(55,52,51,0.7);
+    text-align: right;
+    line-height: 70px;
+    margin-top: -100px;
+}
+
+header nav{
+    margin-right: 10%;
+}
+
+header nav a{
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+
+header nav a:hover{
+    color: rgb(255,165,0);
+}
+
