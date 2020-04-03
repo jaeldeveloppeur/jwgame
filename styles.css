@@ -1,0 +1,62 @@
+/* GENERAL */
+body{
+    margin: 0;
+    font-family: arial, sans-serif;
+}
+
+.container{
+    max-width: 1150px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* HEADER */
+
+.logo{
+    margin-left: 10%;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: rgba(55,52,51,0.7);
+    text-align: right;
+    line-height: 70px;
+    margin-top: -100px;
+}
+
+header nav{
+    margin-right: 10%;
+}
+
+header nav a{
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+
+/* SECTION IMAGE PRINCIPALE */
+
+
+#mainImage{
+    background-image :url(images/ipad-1721428_1920.jpg) ;
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align: right;
+    line-height: 60px;
+    height: 60px;
+    padding-right: 10%;
+    background-color: grey;
+    color: white;
+    
+}
+
