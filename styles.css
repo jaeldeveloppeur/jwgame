@@ -4,11 +4,23 @@ body{
     font-family: arial, sans-serif;
 }
 
+h1{
+    margin: 0;
+    text-align: center;
+    color: #737170;
+    font-family: arial;
+}
+
 .container{
     max-width: 1150px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
 
 /* HEADER */
@@ -38,6 +50,10 @@ header nav a{
     text-transform: uppercase;
 }
 
+header nav a:hover{
+    color: rgb(255,165,0);
+}
+
 /* SECTION IMAGE PRINCIPALE */
 
 
@@ -45,7 +61,58 @@ header nav a{
     background-image :url(images/ipad-1721428_1920.jpg) ;
     background-size: cover;
     background-position: center;
-    height: 800px;
+    height: 817px;
+}
+
+#mainImage h1{
+    padding-top: 62px;
+    line-height: 60px;
+    font-size: 30px;
+}
+
+.test{
+    position: relative;
+    top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    width: 100%;
+    max-width: 700px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 40px;
+    margin-bottom: 150px;
+    
+}
+
+.amuser{
+    text-transform: uppercase;
+    color: #4A6DA7;
+}
+
+.boutonRegles, .boutonJouer{
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px;
+    background-color: rgba(255,165,0,0.8);
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.boutonRegles{
+    margin-bottom: 60px;
+}
+
+.boutonRegles:hover{
+    background-color: rgba(255,165,0,0.4);
+    transition-duration: 300ms;
+}
+.boutonJouer:hover{
+    background-color: rgba(255,165,0,0.4);
+    transition-duration: 300ms;
 }
 
 /* FOOTER */
