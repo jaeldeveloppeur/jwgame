@@ -32,9 +32,13 @@
         </section>
         
         <section id="bouton">
-                <button type="button" name="deviner" id="bouton1">Un autre indice</button>
-                <button type="button" name="indice" id="bouton2">J'ai deviné</button>
-                <button type="button" name="new" id="bouton3">Nouveau<br> personnage</button>
+                <button type="button" id="bouton1">Un autre indice</button>
+                <div id="modal">
+                    <h1>Je suis ... !</h1>
+                    <button id="close" onclick="closeModal()">Fermer</button>
+                </div>
+                <button type="button" id="bouton2">J'ai deviné</button>
+                <button type="button" id="bouton3">Nouveau<br> personnage</button>
         </section>
         
         <footer>
