@@ -77,14 +77,14 @@ h1{
 /*    box-sizing: border-box;*/
     width: 90%;
     max-width: 830px;
-    height: 600px;
+    height: 900px;
 /*
     margin-left: auto;
     margin-right: auto;
 */
     border-radius: 20px;
     background-image: url(images/old-2012064_1920.jpg);
-    padding: 15px;
+    padding: 25px 10px;
         
 }
 
@@ -92,28 +92,30 @@ carte ol{
     
 }
 
-#carte li{
-    margin-bottom: 20px;
+.li{
+    margin-bottom: 40px;
     text-align: center;
-    font-size: 23px;
+    font-size: 22px;
     height: 40px;
-    line-height: 25px;
+    line-height: 30px;
 }
 
 /*BOUTON*/
 
 #bouton{
+/*
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+*/
+    height: 100px;
     white-space: nowrap;
+    width: 100%;
 }
 
 
 #bouton1, #bouton2{
-    max-width: 200px;
-    width: 30%;
+    width: 200px;
     background-color: #FFBD59;
     height: 100px;
     width: 200px;
@@ -128,8 +130,7 @@ carte ol{
 
 #bouton3{
     height: 100px;
-    max-width: 200px;
-    width: 30%;
+    width: 200px;
     border-radius: 30px;
     color: #4A6DA7;
     font-weight: bold;
@@ -137,6 +138,24 @@ carte ol{
     border: 3px solid #4A6DA7;
     text-align: center;
     background-color: #FFBD59;
+}
+
+#bouton1{
+    position: fixed;
+    bottom: 70px;
+    left: 25%;
+}
+
+#bouton2{
+    position: fixed;
+    bottom: 70px;
+    right: 43%;
+}
+
+#bouton3{
+    position: fixed;
+    bottom: 70px;
+    right: 25%;
 }
 
 #bouton1:hover{
