@@ -34,10 +34,25 @@
         <section id="bouton">
                 <button type="button" id="bouton1">Un autre indice</button>
                 <div id="modal">
-                    <h1>Je suis ... !</h1>
+                    <h1>Je suis AARON !</h1>
                     <button id="close" onclick="closeModal()">Fermer</button>
                 </div>
+            
                 <button type="button" id="bouton2">J'ai deviné</button>
+                <div id="modal2">
+                    <label for="reponse">Je pense que tu es :</label>
+                    <input type="text" placeholder="Nom du personnage" style="text-transform: uppercase" id="reponse">
+                    <button type="button" id="boutonValider">valider</button>
+                </div>
+                <div id="modalGagne">
+                    <a href="#" onclick="closeModalGagne()" class="croixModal">&#10007;</a>
+                    <h1>BRAVO !</h1>
+                </div>
+                <div id="modalPerdu">
+                    <a href="#" onclick="closeModalPerdu()" class="croixModal">&#10007;</a>
+                    <h1>DOMMAGE !</h1>
+                </div>
+                
                 <button type="button" id="bouton3">Nouveau<br> personnage</button>
         </section>
         
