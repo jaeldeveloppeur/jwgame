@@ -7,25 +7,15 @@ let listeIndices = [["Mon fils Eléazar m'a succédé comme prêtre en Israël -
 
 const bonneReponse = "aaron" ;
 
+let dernierPerso = 0;
+let nombreAleatoire = 0;
+
+function genererNombreEntier(max){
+    return Math.floor(Math.random() * Math.floor(max));
+}
+
+
 var click = -1;
-
-function ajoutIndice (){
-    click += 1; 
-    if (click > 8){
-        function openModal(){
-            document.getElementById("modal").style.top = "150px";
-        }
-        openModal();
-    }
-    else{
-        const indice = document.createElement("li");
-        indice.classList.add("li");
-        indice.textContent = listeIndices[click];
-        document.getElementById("indiceListe").appendChild(indice);   
-    } 
-        
-};
-
 
 function closeModal(){
     document.getElementById("modal").style.top = "-300px";
@@ -48,8 +38,21 @@ function closeModal2(){
 };
 
 
-bouton1.addEventListener('click', ajoutIndice);
-bouton2.addEventListener('click', openModal2);
+function ajoutIndice (){
+    click += 1; 
+    if (click > 8){
+        function openModal(){
+            document.getElementById("modal").style.top = "150px";
+        }
+        openModal();
+    }
+    else{
+        const indice = document.createElement("li");
+        indice.classList.add("li");
+        indice.textContent = listeIndices[click];
+        document.getElementById("indiceListe").appendChild(indice);   
+    }       
+};
 
 function validationReponse (){
     var test = document.getElementById('reponse').value;
@@ -62,5 +65,21 @@ function validationReponse (){
     closeModal2();   
 };
 
+
+function nouveauPersonnage (){
+//    window.location.reload();
+//    do {
+//       nombreAleatoire = genererNombreEntier(listeIndices.length); 
+//    } while(nombreAleatoire == dernierPerso);
+    
+    var ol = document.getElementById('indiceListe').getElementsByTagName("li");
+    while(ol.length > 0){
+        ol[0].parentNode.removeChild(ol[0]);
+    }
+};
+
+bouton1.addEventListener('click', ajoutIndice);
+bouton2.addEventListener('click', openModal2);
 boutonValider.addEventListener('click', validationReponse);
+bouton3.addEventListener('click', nouveauPersonnage);
 
