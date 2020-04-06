@@ -75,6 +75,9 @@ header nav a:hover{
 }
 
 .carte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 /*    box-sizing: border-box;*/
     width: 90%;
     max-width: 830px;
@@ -95,7 +98,7 @@ ol{
 }
 
 .li{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: center;
     font-size: 22px;
     height: 100%;
@@ -106,6 +109,25 @@ ol{
     padding: 0.9%;
     list-style: none;
     
+}
+
+#abandon
+{
+    width: 60%;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgba(115,113,112,0.4);
+    border-radius: 8px;
+    border: 2px solid white;
+    color: white;
+    text-transform: uppercase;
+}
+
+#abandon:hover{
+    background-color: rgba(255,189,89,0.5);
+    transition-duration: 400ms;
+    border: 2px solid #FFBD59;
 }
 
 /*BOUTON*/

@@ -3,6 +3,7 @@ const bouton2 = document.getElementById('bouton2');
 const bouton3 = document.getElementById('bouton3');
 const boutonValider = document.getElementById('boutonValider');
 const boutonStart = document.getElementById('startJeu1');
+const boutonAbandon = document.getElementById('abandon');
 
 let listeIndices = [
     ["1 : Je suis né en 1597 av.n.è, fils de Amram et Jokébed - Exode 6:20", "2 : Mon fils Eléazar m'a succédé comme prêtre en Israël - Nombres 20:28","3 : J'ai critiqué Moïse pour avoir épousé une femme Koushite - Nombres 12:1,2","4 : Mes fils, Nadab et Abihou, ont été tués par Jéhovah - Lévitique 10:1,2","5 : Mon bâton a bourgeonné, ce qui signifie que Jéhovah m'a choisi - Nombres 17:8","6 : Mon bâton est devenu un gros serpent - Exode 7:9-12","7 : Le Nil s'est transformé en sang lorsque je l'ai touché par mon bâton - Exode 7:20","8 : J'ai représenté Moïse comme porte-parole - Exode 4:10-17,30","9 : Je suis le premier Grand Prêtre en Israël - Exode 28","10 : Ma soeur s'appelle Miriam et mon frère Moïse - Exode 15:20"],
@@ -51,18 +52,24 @@ function closeModal2(){
     document.getElementById("modal2").style.top = "-300px";
 };
 
+function abandon(){
+    var supprLi = document.getElementById("modal").getElementsByTagName("h1");
+    while(supprLi.length > 0){
+        supprLi[0].parentNode.removeChild(supprLi[0]);
+    }
+    
+    document.getElementById("modal").style.top = "150px";
+    const personnage = document.createElement("h1");
+    personnage.textContent = "Je suis " + bonneReponse[nombreAleatoire];
+    document.getElementById("modal").appendChild(personnage);
+    };
+
 
 function ajoutIndice (){
     click += 1;
     
     if (click > listeIndices[nombreAleatoire].length - 1){
-        function openModal(){
-            document.getElementById("modal").style.top = "150px";
-            const personnage = document.createElement("h1");
-            personnage.textContent = "Je suis " + bonneReponse[nombreAleatoire];
-            document.getElementById("modal").appendChild(personnage);
-        }
-        openModal();
+        console.log("coucou");
     }
     else{
         const indice = document.createElement("li");
@@ -114,4 +121,4 @@ bouton2.addEventListener('click', openModal2);
 boutonValider.addEventListener('click', validationReponse);
 bouton3.addEventListener('click', nouveauPersonnage);
 boutonStart.addEventListener('click', nouveauPersonnage);
-
+boutonAbandon.addEventListener('click', abandon);
