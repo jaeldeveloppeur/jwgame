@@ -58,6 +58,9 @@ function ajoutIndice (){
     if (click > listeIndices[nombreAleatoire].length - 1){
         function openModal(){
             document.getElementById("modal").style.top = "150px";
+            const personnage = document.createElement("h1");
+            personnage.textContent = "Je suis " + bonneReponse[nombreAleatoire];
+            document.getElementById("modal").appendChild(personnage);
         }
         openModal();
     }
@@ -88,6 +91,7 @@ function validationReponse (){
 
 function nouveauPersonnage (){
 //    window.location.reload();
+    scrollTo(0,0);
     do {
        nombreAleatoire = genererNombreEntier(listeIndices.length); 
     } while(nombreAleatoire == dernierPerso);
@@ -104,9 +108,6 @@ function nouveauPersonnage (){
     indice.textContent = listeIndices[nombreAleatoire][0];
     document.getElementById("indiceListe").appendChild(indice);
 };
-
-
-
 
 bouton1.addEventListener('click', ajoutIndice);
 bouton2.addEventListener('click', openModal2);

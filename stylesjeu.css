@@ -127,7 +127,8 @@ ol{
     background-color: white;
     height: 100px;
     white-space: nowrap;
-    width: 90%;
+    width: 60%;
+    padding: 5px;
     border: 4px solid #4A6DA7;
     border-radius: 15px;
 }
@@ -247,6 +248,7 @@ ol{
 .croixModal{
     margin-left: 160px;
     font-size: 40px;
+    color: black;
 }
 
 #modalGagne{
