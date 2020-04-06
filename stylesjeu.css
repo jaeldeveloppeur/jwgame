@@ -59,6 +59,7 @@ header nav a:hover{
     flex-direction: column;
     align-items: center;
 }
+
 #carte h1{
     margin-top: 40px;
     text-transform: uppercase;
@@ -77,27 +78,34 @@ header nav a:hover{
 /*    box-sizing: border-box;*/
     width: 90%;
     max-width: 830px;
-    height: 900px;
-/*
-    margin-left: auto;
-    margin-right: auto;
-*/
+    height: 100%;
+    min-height: 600px;
     border-radius: 20px;
     background-image: url(images/old-2012064_1920.jpg);
-    padding: 25px 10px;
-        
+    padding: 0px 10px;
+    margin-bottom: 60px;
 }
 
-carte ol{
-    
+ol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 0px;
 }
 
 .li{
     margin-bottom: 40px;
     text-align: center;
     font-size: 22px;
-    height: 40px;
+    height: 100%;
     line-height: 30px;
+    background-color: #4A6DA7;
+    border-radius: 15px;
+    color: #FFBD59;
+    padding: 0.9%;
+    list-style: none;
+    
 }
 
 /*BOUTON*/
@@ -115,7 +123,7 @@ carte ol{
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 60px;
+    bottom: 0px;
     background-color: white;
     height: 100px;
     white-space: nowrap;
