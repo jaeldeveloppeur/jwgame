@@ -16,7 +16,7 @@ let listeIndices = [
     ["1 : Je suis originaire du pont - Actes 18:2", "2 : Nous avons embarqué pour la Syrie, accompagné de Paul - Actes 18:18", "3 : L'assemblée de Corinthe se rassemblait dans ma maison - 1 Corinthiens 16:19", "4 : Paul m'appelle 'mon collaborateur en christ Jésus' - Romains 16:3", "5 : L'assemblée de Rome se rassemblait dans ma maison - Romains 16:5", "6 : Jai risqué ma propre tête pour Paul - Romains 16:4", "7 : J'étais un fabricant de tentes comme Paul - Actes 18:3", "8 : Avec ma femme, nous avons expliqué précisément la parole de Dieu à Apollos - Actes 18:26","9 : Moi et ma femme, nous sommes toujours mentionnés ensemble - Actes 18", "10 : Ma femme s'appelle Priscille - Actes 18:2"],
 ];
 
-const bonneReponse = ["aaron","abel","abraham","absalon","adam","amos","apollos","aquilas"];
+const bonneReponse = ["AARON","ABEL","ABRAHAM","ABSALON","ADAM","AMOS","APOLLOS","AQUILAS"];
 
 let dernierPerso = 0;
 let nombreAleatoire = 0;
@@ -53,13 +53,13 @@ function closeModal2(){
 };
 
 function abandon(){
-    var supprLi = document.getElementById("modal").getElementsByTagName("h1");
+    var supprLi = document.getElementById("modal").getElementsByTagName("h2");
     while(supprLi.length > 0){
         supprLi[0].parentNode.removeChild(supprLi[0]);
     }
     
     document.getElementById("modal").style.top = "150px";
-    const personnage = document.createElement("h1");
+    const personnage = document.createElement("h2");
     personnage.textContent = "Je suis " + bonneReponse[nombreAleatoire];
     document.getElementById("modal").appendChild(personnage);
     };
