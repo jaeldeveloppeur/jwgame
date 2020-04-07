@@ -30,37 +30,40 @@
                     <!--li JS-->
                 </ol>
                 <button type="button" id="abandon">Obtenir la réponse</button>
-                <div id="modal">
-<!--                    AJOUT REPONSE EN JS -->
-                    <button id="close" onclick="closeModal()">Fermer</button>
-                </div>
                 
             </div>
         </section>
         
-        <div class="containerDisplayFlex">
         <section id="bouton">
                 <button type="button" id="bouton1">Indice</button>
-                
                 <button type="button" id="bouton2">Je sais</button>
+                <button type="button" id="bouton3">Nouveau<br>Perso.</button>
+        </section>
+        
+        <section class="containerModal">
             
-                <div id="modal2">
+            <div id="modal2">
                     <label for="reponse">Je pense que tu es :</label>
                     <input type="text" placeholder="Nom du personnage" style="text-transform: uppercase" id="reponse">
                     <button type="button" id="boutonValider">valider</button>
-                </div>
-                <div id="modalGagne">
+            </div>
+            
+            <div id="modalGagne">
                     <a href="#" onclick="closeModalGagne()" class="croixModal">&#10007;</a>
                     <h1>BRAVO !</h1>
-                </div>
-                <div id="modalPerdu">
+            </div>
+            
+            <div id="modalPerdu">
                     <a href="#" onclick="closeModalPerdu()" class="croixModal">&#10007;</a>
                     <h1>DOMMAGE !</h1>
-                </div>
-                
-                <button type="button" id="bouton3">Nouveau<br>Perso.</button>
+            </div>
+            
+            <div id="modal">
+<!--                    AJOUT REPONSE EN JS -->
+                    <button id="close" onclick="closeModal()">Fermer</button>
+            </div>
+        
         </section>
-        </div>
         
         <footer>
             Petit Projet pendant le confinement
