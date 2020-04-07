@@ -65,7 +65,7 @@ header nav a:hover{
     text-transform: uppercase;
     color: #4A6DA7;
     padding: 40px;
-    width: 300px;
+    width: 240px;
     margin-left: auto;
     margin-right: auto;
     background-color:#FFBD59;
@@ -145,20 +145,20 @@ ol{
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 0px;
-    background-color: white;
+    bottom: 20px;
+    background-color: rgba(0,0,0,0);
     height: 100px;
     white-space: nowrap;
     width: 60%;
     padding: 5px;
-    border: 4px solid #4A6DA7;
-    border-radius: 15px;
+/*    border: 4px solid #4A6DA7;*/
+/*    border-radius: 15px;*/
 }
 
 
 #bouton1, #bouton2{
     background-color: #FFBD59;
-    height: 75px;
+    height: 125px;
     width: 120px;
     font-weight: bold;
     font-size: 16px;
@@ -166,13 +166,13 @@ ol{
     border: 3px solid #4A6DA7;
     text-align: center;
     margin-right: 15px;
-    border-radius: 30px;
+    border-radius: 1000px;
 }
 
 #bouton3{
-    height: 75px;
-    width: 120px;
-    border-radius: 30px;
+    height: 125px;
+    width: 130px;
+    border-radius: 1000px;
     color: #4A6DA7;
     font-weight: bold;
     font-size: 16px;
@@ -184,19 +184,19 @@ ol{
 #bouton1:hover{
     background-color:rgba(255,189,89,0.6);
     border-radius: 40px;
-    transition-duration: 600ms;
+    transition-duration: 400ms;
 }
 
 #bouton2:hover{
     background-color:rgba(255,189,89,0.6);
     border-radius: 40px;
-    transition-duration: 500ms;
+    transition-duration: 400ms;
 }
 
 #bouton3:hover{
     background-color:rgba(255,189,89,0.6);
     border-radius: 40px;
-    transition-duration: 500ms;
+    transition-duration: 400ms;
 }
 
 /* MODAL */

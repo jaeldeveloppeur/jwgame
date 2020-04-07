@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <title>JW GAME</title>
         <link href="stylesjeu.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
     </head>
     
@@ -35,13 +36,14 @@
         
         <div class="containerDisplayFlex">
         <section id="bouton">
-                <button type="button" id="bouton1">Un autre<br> indice</button>
+                <button type="button" id="bouton1">Indice</button>
                 <div id="modal">
 <!--                    AJOUT REPONSE EN JS -->
                     <button id="close" onclick="closeModal()">Fermer</button>
                 </div>
             
-                <button type="button" id="bouton2">J'ai<br> deviné</button>
+                <button type="button" id="bouton2">Je sais</button>
+            
                 <div id="modal2">
                     <label for="reponse">Je pense que tu es :</label>
                     <input type="text" placeholder="Nom du personnage" style="text-transform: uppercase" id="reponse">
@@ -56,7 +58,7 @@
                     <h1>DOMMAGE !</h1>
                 </div>
                 
-                <button type="button" id="bouton3">Nouveau<br> personnage</button>
+                <button type="button" id="bouton3">Recommencer</button>
         </section>
         </div>
         
