@@ -6,6 +6,7 @@ const boutonStart = document.getElementById('startJeu1');
 const boutonAbandon = document.getElementById('abandon');
 
 let listeIndices = [
+    ["X","X","X","X","X","X","X","X","X","X"],
     ["1 : Je suis né en 1597 av.n.è, fils de Amram et Jokébed - Exode 6:20", "2 : Mon fils Eléazar m'a succédé comme prêtre en Israël - Nombres 20:28","3 : J'ai critiqué Moïse pour avoir épousé une femme Koushite - Nombres 12:1,2","4 : Mes fils, Nadab et Abihou, ont été tués par Jéhovah - Lévitique 10:1,2","5 : Mon bâton a bourgeonné, ce qui signifie que Jéhovah m'a choisi - Nombres 17:8","6 : Mon bâton est devenu un gros serpent - Exode 7:9-12","7 : Le Nil s'est transformé en sang lorsque je l'ai touché par mon bâton - Exode 7:20","8 : J'ai représenté Moïse comme porte-parole - Exode 4:10-17,30","9 : Je suis le premier Grand Prêtre en Israël - Exode 28","10 : Ma soeur s'appelle Miriam et mon frère Moïse - Exode 15:20"],
     ["1 : Le sang de Jésus parle mieux que le mien - Hébreux 12:24","2 : Il se dit de moi : 'bien que mort, il parle encore' - Hébreux 11:4", "3 : Jésus dis que j'ai vécu 'à la fondation du monde' - Luc 11:50,51", "4 : Mon sang crie du sol vers Jéhovah - Genèse 4:10", "5 : J'ai offert à Dieu un sacrifice de plus grande valeur - Hébreux 11:4", "6 : J'étais un berger, mon frère était cultivateur - Genèse 4:2", "7 : Je suis le premier humain à avoir manifesté la foi - Hébreux 11:4", "8 : Je suis victime du premier meurtre pour mes actions justes - 1 Jean 3:12", "9 : Je suis le deuxième enfant de Adam et Eve - Genèse 4:2", "10 : Je suis le petit frère de Caïn"],
     ["1 : Je suis la première personne à avoir été nommé 'l'hébreu' - Genèse 14:13", "2 : J'ai construit un autel à Jéhovah à Béthel - Genèse 12:8", "3 : Ma femme, Ketoura, donne naissance à six enfants - Genèse 25:1", "4 : J'ai envoyé mes serviteurs chercher une femme pour mon fils - Genèse 24:4,10", "5 : J'ai acheté un champ à Makpéla et j'y ai enterré ma femme - Genèse 23:19", "6 : J'ai eu un fils à 100ans - Genèse 21:5", "7 : On dit de moi 'C'est le père de tous ceux qui ont foi' - Romains 4:11", "8 : On m'a appelé 'ami de Jéhovah' - Jacques 2:23", "9 : J'ai accepté d'offrir mon fils en sacrifice - Hébreux 11:17", "10 : Sara était ma femme - Genèse 17:15"],
@@ -16,7 +17,9 @@ let listeIndices = [
     ["1 : Je suis originaire du pont - Actes 18:2", "2 : Nous avons embarqué pour la Syrie, accompagné de Paul - Actes 18:18", "3 : L'assemblée de Corinthe se rassemblait dans ma maison - 1 Corinthiens 16:19", "4 : Paul m'appelle 'mon collaborateur en christ Jésus' - Romains 16:3", "5 : L'assemblée de Rome se rassemblait dans ma maison - Romains 16:5", "6 : Jai risqué ma propre tête pour Paul - Romains 16:4", "7 : J'étais un fabricant de tentes comme Paul - Actes 18:3", "8 : Avec ma femme, nous avons expliqué précisément la parole de Dieu à Apollos - Actes 18:26","9 : Moi et ma femme, nous sommes toujours mentionnés ensemble - Actes 18", "10 : Ma femme s'appelle Priscille - Actes 18:2"],
 ];
 
-const bonneReponse = ["aaron","abel","abraham","absalon","adam","amos","apollos","aquilas"];
+const listeImage = ["x",1,2,3,4,5,6,7,8];
+
+const bonneReponse = ["x","aaron","abel","abraham","absalon","adam","amos","apollos","aquilas"];
 
 let dernierPerso = 0;
 let nombreAleatoire = 0;
@@ -33,7 +36,7 @@ if(window.addEventListener){
 };
 
 function closeModal(){
-    document.getElementById("modal").style.top = "-300px";
+    document.getElementById("modal").style.top = "-700px";
 };
 
 function closeModalGagne (){
@@ -53,16 +56,27 @@ function closeModal2(){
 };
 
 function abandon(){
+    console.log(nombreAleatoire);
     var supprLi = document.getElementById("modal").getElementsByTagName("h2");
+    var supprImg = document.getElementById("modal").getElementsByTagName("img");
+    
     while(supprLi.length > 0){
         supprLi[0].parentNode.removeChild(supprLi[0]);
     }
+    while(supprImg.length > 0){
+        supprImg[0].parentNode.removeChild(supprImg[0]);
+    }
     
-    document.getElementById("modal").style.top = "150px";
+    document.getElementById("modal").style.top = "100px";
+//    creation h2 reponse
     const personnage = document.createElement("h2");
     personnage.style.textAlign = "center";
     personnage.textContent = "Je suis " + bonneReponse[nombreAleatoire];
     document.getElementById("modal").appendChild(personnage);
+//    creation image perso
+    const imagePerso = document.createElement("img");
+    imagePerso.setAttribute("src", "images/imageRD/" + listeImage[nombreAleatoire] + ".png");
+    document.getElementById("modal").appendChild(imagePerso);
     };
 
 
