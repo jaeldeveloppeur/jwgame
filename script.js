@@ -3,7 +3,7 @@ const bouton2 = document.getElementById('bouton2');
 const bouton3 = document.getElementById('bouton3');
 const boutonValider = document.getElementById('boutonValider');
 const boutonStart = document.getElementById('startJeu1');
-const boutonAbandon = document.getElementById('abandon');
+//const boutonAbandon = document.getElementById('abandon');
 
 let listeIndices = [
     ["X","X","X","X","X","X","X","X","X","X"],
@@ -40,11 +40,11 @@ function closeModal(){
 };
 
 function closeModalGagne (){
-    document.getElementById("modalGagne").style.top = "-300px";
+    document.getElementById("modalGagne").style.top = "-700px";
 };
 
 function closeModalPerdu (){
-    document.getElementById("modalPerdu").style.top = "-300px";
+    document.getElementById("modalPerdu").style.top = "-700px";
 };
 
 function openModal2(){
@@ -52,7 +52,7 @@ function openModal2(){
 };
 
 function closeModal2(){
-    document.getElementById("modal2").style.top = "-300px";
+    document.getElementById("modal2").style.top = "-700px";
 };
 
 function abandon(){
@@ -73,7 +73,7 @@ function abandon(){
     personnage.style.textAlign = "center";
     personnage.textContent = "Je suis " + bonneReponse[nombreAleatoire];
     document.getElementById("modal").appendChild(personnage);
-//    creation image perso
+//    ajout image perso
     const imagePerso = document.createElement("img");
     imagePerso.setAttribute("src", "images/imageRD/" + listeImage[nombreAleatoire] + ".png");
     document.getElementById("modal").appendChild(imagePerso);
@@ -97,12 +97,40 @@ function ajoutIndice (){
         var hauteur = document.body.scrollHeight;
         scrollTo(0,hauteur);
     }
+    
+    if(click > 8){
+//        creation et ajout du bouton
+        console.log(click);
+        const boutonReponse = document.createElement("button");
+        boutonReponse.setAttribute("type","button");
+        boutonReponse.setAttribute("id","abandon");
+        boutonReponse.textContent = "OBTENIR LA REPONSE";
+        document.getElementById("indiceListe").appendChild(boutonReponse);
+        boutonReponse.addEventListener('click', abandon);
+        
+//        Supprimer bouton lors d'un reclic
+        var supprBoutonReponse = document.getElementById("indiceListe").getElementsByTagName("button");
+    
+        while(supprBoutonReponse.length > 0){
+        supprBoutonReponse[1].parentNode.removeChild(supprBoutonReponse[1]);
+        }
+    }
 };
 
 function validationReponse (){
     var test = document.getElementById('reponse').value;
+    
     if (test == bonneReponse[nombreAleatoire]){
         document.getElementById("modalGagne").style.top = "150px";
+//        ajout image
+        const imagePerso = document.createElement("img");
+        imagePerso.setAttribute("src", "images/imageRD/" + listeImage[nombreAleatoire] + ".png");
+//        Supprimer image
+        var supprImg = document.getElementById("modalGagne").getElementsByTagName("img");
+        while(supprImg.length > 0){
+        supprImg[0].parentNode.removeChild(supprImg[0]);
+    }
+        document.getElementById("modalGagne").appendChild(imagePerso);
     }
     else{
         document.getElementById("modalPerdu").style.top = "150px";
@@ -113,7 +141,14 @@ function validationReponse (){
 
 function nouveauPersonnage (){
 //    window.location.reload();
+    
     scrollTo(0,0);
+    
+    var supprBoutonReponse = document.getElementById("indiceListe").getElementsByTagName("button");
+    while(supprBoutonReponse.length > 0){
+    supprBoutonReponse[0].parentNode.removeChild(supprBoutonReponse[0]);
+    }
+    
     do {
        nombreAleatoire = genererNombreEntier(listeIndices.length); 
     } while(nombreAleatoire == dernierPerso);
@@ -123,7 +158,6 @@ function nouveauPersonnage (){
         ol[0].parentNode.removeChild(ol[0]);
     }
     
-    console.log(nombreAleatoire);
     click = 0;
     const indice = document.createElement("li");
     indice.classList.add("li");
@@ -136,4 +170,4 @@ bouton2.addEventListener('click', openModal2);
 boutonValider.addEventListener('click', validationReponse);
 bouton3.addEventListener('click', nouveauPersonnage);
 boutonStart.addEventListener('click', nouveauPersonnage);
-boutonAbandon.addEventListener('click', abandon);
+//boutonAbandon.addEventListener('click', abandon);

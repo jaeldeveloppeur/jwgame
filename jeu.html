@@ -28,8 +28,7 @@
             <div class="carte">
                 <ol id="indiceListe">
                     <!--li JS-->
-                </ol>
-                <button type="button" id="abandon">Obtenir la réponse</button>                
+                </ol>              
             </div>
         </section>
         
@@ -48,18 +47,18 @@
             </div>
             
             <div id="modalGagne">
-                    <a href="#" onclick="closeModalGagne()" class="croixModal">&#10007;</a>
-                    <h1>BRAVO !</h1>
+                    <button class="close" onclick="closeModalGagne()">Fermer</button>
+                    <h1>BRAVO, tu as deviné!</h1>
             </div>
             
             <div id="modalPerdu">
-                    <a href="#" onclick="closeModalPerdu()" class="croixModal">&#10007;</a>
+                    <button class="close" onclick="closeModalPerdu()">Fermer</button>
                     <h1>DOMMAGE !</h1>
             </div>
             
             <div id="modal">
 <!--                    AJOUT REPONSE EN JS -->
-                    <button id="close" onclick="closeModal()">Fermer</button>
+                    <button class="close" onclick="closeModal()">Fermer</button>
             </div>
         
         </section>
