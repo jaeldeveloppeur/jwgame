@@ -110,6 +110,7 @@ function ajoutIndice (){
         
 //        Supprimer bouton lors d'un reclic
         var supprBoutonReponse = document.getElementById("indiceListe").getElementsByTagName("button");
+        scrollTo(0,hauteur);
     
         while(supprBoutonReponse.length > 0){
         supprBoutonReponse[1].parentNode.removeChild(supprBoutonReponse[1]);
@@ -143,6 +144,10 @@ function nouveauPersonnage (){
 //    window.location.reload();
     
     scrollTo(0,0);
+    closeModal();
+    closeModalGagne();
+    closeModal2();
+    closeModalPerdu();
     
     var supprBoutonReponse = document.getElementById("indiceListe").getElementsByTagName("button");
     while(supprBoutonReponse.length > 0){
