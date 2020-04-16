@@ -32,7 +32,7 @@ let listeVerset = [
     
 ]
 
-const bonneReponse = ["x","aaron","abel","abraham","absalon","adam","amos","apollos","aquilas"];
+const bonneReponse = ["x","AARON","ABEL","ABRAHAM","ABSALON","ADAM","AMOS","APOLLOS","AQUILAS"];
 
 let dernierPerso = 0;
 let nombreAleatoire = 0;
@@ -112,7 +112,6 @@ function ajoutIndice (){
     
 //      Supprimer bouton lors d'un reclic
     var supprBoutonReponse= document.getElementById("indiceListe").getElementsByTagName("button");
-    scrollTo(0,hauteur);
     
     while(supprBoutonReponse.length > 0){
     supprBoutonReponse[0].parentNode.removeChild(supprBoutonReponse[0]);
@@ -148,7 +147,7 @@ function ajoutIndice (){
 };
 
 function validationReponse (){
-    var test = document.getElementById('reponse').value;
+    var test = document.getElementById('reponse').value.toUpperCase();
     
     if (test == bonneReponse[nombreAleatoire]){
         document.getElementById("modalGagne").style.top = "0px";
@@ -166,6 +165,8 @@ function validationReponse (){
 //        ajout image
         var imagePerso = document.createElement("img");
         imagePerso.setAttribute("src", "images/imageRD/" + listeImage[nombreAleatoire] + ".png");
+//        imagePerso.style.height= "250px";
+//        imagePerso.style.width= "250px";
         document.getElementById("modalGagne").appendChild(imagePerso);
 //        ajout verset
         var g=0;
@@ -215,6 +216,7 @@ function nouveauPersonnage (){
     indice.classList.add("li");
     indice.textContent = listeIndices[nombreAleatoire][0];
     document.getElementById("indiceListe").appendChild(indice);
+    document.getElementById('reponse').value = "";
 };
 
 bouton1.addEventListener('click', ajoutIndice);
