@@ -34,6 +34,8 @@ let listeVerset = [
 
 const bonneReponse = ["x","AARON","ABEL","ABRAHAM","ABSALON","ADAM","AMOS","APOLLOS","AQUILAS"];
 
+var arrayNombreEntier = [0];
+
 let dernierPerso = 0;
 let nombreAleatoire = 0;
 var click = -1;
@@ -41,6 +43,7 @@ var click = -1;
 function genererNombreEntier(max){
     return Math.floor(Math.random() * Math.floor(max));
 }
+
 
 if(window.addEventListener){
     window.addEventListener('load', nouveauPersonnage, false);
@@ -165,8 +168,6 @@ function validationReponse (){
 //        ajout image
         var imagePerso = document.createElement("img");
         imagePerso.setAttribute("src", "images/imageRD/" + listeImage[nombreAleatoire] + ".png");
-//        imagePerso.style.height= "250px";
-//        imagePerso.style.width= "250px";
         document.getElementById("modalGagne").appendChild(imagePerso);
 //        ajout verset
         var g=0;
@@ -200,11 +201,15 @@ function nouveauPersonnage (){
     var supprBoutonReponse = document.getElementById("indiceListe").getElementsByTagName("button");
     while(supprBoutonReponse.length > 0){
     supprBoutonReponse[0].parentNode.removeChild(supprBoutonReponse[0]);
-    }
+    };
     
+//    generer un nombre aleatoire sauf le precedent
     do {
-       nombreAleatoire = genererNombreEntier(listeIndices.length); 
-    } while(nombreAleatoire == dernierPerso);
+        nombreAleatoire = genererNombreEntier(listeIndices.length);
+        console.log(nombreAleatoire);
+    } while ((arrayNombreEntier.includes(nombreAleatoire) == true) && ((arrayNombreEntier.length >= listeIndices.length) == false));
+    
+    arrayNombreEntier.push(nombreAleatoire);
     
     var ol = document.getElementById('indiceListe').getElementsByTagName("li");
     while(ol.length > 0){
@@ -224,4 +229,3 @@ bouton2.addEventListener('click', openModal2);
 boutonValider.addEventListener('click', validationReponse);
 bouton3.addEventListener('click', nouveauPersonnage);
 boutonStart.addEventListener('click', nouveauPersonnage);
-//boutonAbandon.addEventListener('click', abandon);
