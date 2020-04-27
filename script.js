@@ -190,8 +190,6 @@ function validationReponse (){
 
 
 function nouveauPersonnage (){
-//    window.location.reload();
-    
     scrollTo(0,0);
     closeModal();
     closeModalGagne();
@@ -206,7 +204,6 @@ function nouveauPersonnage (){
 //    generer un nombre aleatoire sauf le precedent
     do {
         nombreAleatoire = genererNombreEntier(listeIndices.length);
-        console.log(nombreAleatoire);
     } while ((arrayNombreEntier.includes(nombreAleatoire) == true) && ((arrayNombreEntier.length >= listeIndices.length) == false));
     
     arrayNombreEntier.push(nombreAleatoire);
@@ -228,4 +225,4 @@ bouton1.addEventListener('click', ajoutIndice);
 bouton2.addEventListener('click', openModal2);
 boutonValider.addEventListener('click', validationReponse);
 bouton3.addEventListener('click', nouveauPersonnage);
-boutonStart.addEventListener('click', nouveauPersonnage);
+//boutonStart.addEventListener('click', nouveauPersonnage);
