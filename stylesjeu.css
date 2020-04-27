@@ -84,7 +84,8 @@ header nav a:hover{
     height: 100%;
     min-height: 600px;
     border-radius: 20px;
-    background-image: url(images/old-2012064_1920.jpg);
+/*    background-image: url(images/old-2012064_1920.jpg);*/
+    background-color: #dfe6e9;
     padding: 0px 10px;
     margin-bottom: 60px;
 }
