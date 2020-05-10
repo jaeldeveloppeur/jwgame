@@ -251,3 +251,10 @@ bouton1.addEventListener('click', ajoutIndice);
 bouton2.addEventListener('click', openModal2);
 boutonValider.addEventListener('click', validationReponse);
 bouton3.addEventListener('click', nouveauPersonnage);
+
+function toucheEntree (){
+    if(event.keyCode == 13){
+        validationReponse();
+        
+    }
+}
