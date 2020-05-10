@@ -30,9 +30,20 @@
             
             <section id="mainImage">
                 <div class="test">
-                    <h1>Un petit jeu de devinette<br><span class="amuser">pour s'amuser en famille</span></h1>
+                    <h1>Un jeu de devinette<br><span class="amuser">pour s'amuser en famille</span></h1>
                 </div>
-                <a href="#" class="boutonRegles">Les règles</a>
+                <a href="#" class="boutonRegles" onclick="afficherRegles()">Les règles</a>
+                
+                <div id="regles">
+                    <p style="font-size: 20px; font-weight: bold; color: black;">L'objectif est de trouver le personnage le plus rapidement possible</p>
+                    <ol>
+                        <li>vous avez droit à 10 indices maximum</li>
+                        <li>Les indices sont de plus en plus faciles</li>
+                        <li>Vous pouvez cliquer sur : "ajouter un indice", "donner votre réponse", ou "changer de personnage"</li>
+                        <li>Les versets bibliques qui correspondent à chaque indice apparaissent lorsque vous obtenez la réponse </li>
+                    </ol>
+                </div>
+                
                 <a href="jeu.html" class="boutonJouer">Je joue</a>
             </section>
             
@@ -42,7 +53,7 @@
             Petit Projet pendant le confinement
         </footer>
         
-<!--        <script src="script.js"></script>-->
+        <script src="accueil.js"></script>
     
     </body>
 

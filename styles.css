@@ -23,6 +23,14 @@ a{
     color: white;
 }
 
+ol{
+    list-style: none;
+}
+ol li{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
 /* HEADER */
 
 header{
@@ -60,7 +68,7 @@ header nav a:hover{
     background-image :url(images/ipad-1721428_1920.jpg) ;
     background-size: cover;
     background-position: center;
-    height: 817px;
+    height: 850px;
 }
 
 #mainImage h1{
@@ -81,7 +89,7 @@ header nav a:hover{
     max-width: 700px;
     background-color: rgba(255,255,255,0.9);
     border-radius: 40px;
-    margin-bottom: 150px;
+    margin-bottom: 70px;
     
 }
 
@@ -104,7 +112,7 @@ header nav a:hover{
 }
 
 .boutonRegles{
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 .boutonRegles:hover{
@@ -114,6 +122,19 @@ header nav a:hover{
 .boutonJouer:hover{
     background-color: rgba(255,165,0,0.4);
     transition-duration: 300ms;
+}
+
+#regles{
+    display: none;
+    width: 97%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: rgba(223,230,233,0.8);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /* FOOTER */

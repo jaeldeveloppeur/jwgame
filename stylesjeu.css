@@ -157,10 +157,9 @@ ol{
 
 #bouton1, #bouton2{
     background-color: #FFBD59;
-    height: 125px;
-    width: 130px;
-    font-weight: bold;
-    font-size: 16px;
+    height: 110px;
+    width: 110px;
+    font-size: 40px;
     color: #4A6DA7;
     border: 3px solid #4A6DA7;
     text-align: center;
@@ -169,16 +168,16 @@ ol{
 }
 
 #bouton3{
-    height: 125px;
-    width: 130px;
+    height: 110px;
+    width: 110px;
     border-radius: 1000px;
-    color: #4A6DA7;
-    font-weight: bold;
-    font-size: 16px;
+    color: #636e72;
     border: 3px solid #4A6DA7;
     text-align: center;
-    background-color: #FFBD59;
+    background-color: #dfe6e9;
+    font-size: 40px;
 }
+
 
 #bouton1:hover{
     background-color:rgba(255,189,89,0.6);
